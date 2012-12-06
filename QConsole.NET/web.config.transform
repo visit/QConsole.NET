@@ -1,7 +1,7 @@
 ﻿<configuration>
 	<system.webServer>
-		<modules>
+		<handlers>
 			<add name="QConsoleHandler" path="QConsole.axd" verb="*" type="QConsole.NET.QConsoleHandler, QConsole.NET" preCondition="integratedMode" />
-		</modules>
-		<system.webServer>
+		</handlers>
+	</system.webServer>
 </configuration>
