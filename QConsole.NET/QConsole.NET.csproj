@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>QConsole.NET</RootNamespace>
     <AssemblyName>QConsole.NET</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -47,7 +48,14 @@
     <Compile Include="IQConsoleAuthorization.cs" />
     <Compile Include="IQConsoleCommand.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QConsole.ashx.cs">
+      <DependentUpon>QConsole.ashx</DependentUpon>
+    </Compile>
     <Compile Include="QConsole.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="QConsole.ashx" />
+    <None Include="QConsole.NET.nuspec" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
