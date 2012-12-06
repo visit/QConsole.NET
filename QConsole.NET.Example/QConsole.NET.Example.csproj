@@ -223,6 +223,10 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\QConsole.NET.AspCommands\QConsole.NET.AspCommands.csproj">
+      <Project>{0990a1aa-13cf-49ff-b084-60d2efb1036f}</Project>
+      <Name>QConsole.NET.AspCommands</Name>
+    </ProjectReference>
     <ProjectReference Include="..\QConsole.NET\QConsole.NET.csproj">
       <Project>{b2a0c336-23f8-4734-82f3-56b3f4218d60}</Project>
       <Name>QConsole.NET</Name>

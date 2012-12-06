@@ -24,13 +24,12 @@ namespace QConsole.NET
             {
                 case "commands":
                     DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(CommandsResponse));
-                    var commands = new CommandsDictionary<string,string>();
-                    commands.Add("test","hej test");
+                    
                     var response = new CommandsResponse()
                                        {
-                                           AutoComplete = "/QConsole.ashx?action=complete",
-                                           Execute = "QConsole.ashx?action=execute",
-                                           Commands = commands
+                                           AutoComplete = "/QConsole.axd?action=complete",
+                                           Execute = "/QConsole.axd?action=execute",
+                                           Commands = QConsole.ConsoleCommands
                                        };
 
                     ser.WriteObject(context.Response.OutputStream,response);

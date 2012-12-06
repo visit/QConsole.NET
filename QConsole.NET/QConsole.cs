@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Authentication;
+using System.Threading;
 
 namespace QConsole.NET
 {
@@ -17,6 +18,7 @@ namespace QConsole.NET
                 {
                     if (Authenticators == null)
                     {
+                        Thread.Sleep(500); //hack to wait for assemblies to load
                         Authenticators =
                             AppDomain.CurrentDomain.GetAssemblies()
                                      .SelectMany(ass => ass.GetTypes())
@@ -34,6 +36,16 @@ namespace QConsole.NET
         private static List<IQConsoleCommand> Commands { get; set; }
 
         private static List<IQConsoleAuthorization> Authenticators { get; set; }
+
+        public static CommandsDictionary<string, string> ConsoleCommands
+        {
+            get
+            {
+                var commands = new CommandsDictionary<string, string>();
+                Commands.ForEach(c => commands.Add(c.Name, c.HelpText));
+                return commands;
+            }
+        }
 
         public static ExecuteResponse CommandNotFound = new ExecuteResponse();
 
