@@ -128,6 +128,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SessionAuthorizer.cs" />
     <Compile Include="TestCommand.cs" />
   </ItemGroup>
   <ItemGroup>

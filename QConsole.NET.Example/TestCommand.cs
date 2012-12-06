@@ -29,7 +29,7 @@ namespace QConsole.NET.Example
         {
             return new ExecuteResponse
                        {
-                           Callback = "function() {alert(\"hello\");}",
+                           Callback = "alert(\"hello\");",
                            Result = "test result",
                            Success = true
                        };

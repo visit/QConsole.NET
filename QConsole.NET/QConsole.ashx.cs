@@ -8,7 +8,7 @@ namespace QConsole.NET
     /// <summary>
     /// Summary description for QConsole
     /// </summary>
-    public class QConsoleHandler : IHttpHandler
+    public class QConsoleHandler : IHttpHandler, System.Web.SessionState.IRequiresSessionState
     {
 
         public void ProcessRequest(HttpContext context)

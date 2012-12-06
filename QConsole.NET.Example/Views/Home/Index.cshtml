@@ -20,7 +20,12 @@
 	</head>
 	<body>
 		<div>
-			  
+			  @using (Html.BeginForm("Toggle","Home"))
+			  {
+				  <input type="submit" value="@((bool?)Session["ConsoleAuthorized"] == true ? "Deactivate" : "Activate") console"/>
+			  }
+			
+			Press § on your keyboard.
 		</div>
 	</body>
 </html>

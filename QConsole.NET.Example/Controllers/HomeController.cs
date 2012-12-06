@@ -16,5 +16,13 @@ namespace QConsole.NET.Example.Controllers
             return View();
         }
 
+        [HttpPost]
+        public ActionResult Toggle()
+        {
+            Session["ConsoleAuthorized"] = !((bool?) Session["ConsoleAuthorized"] == true);
+
+            return View("Index");
+        }
+
     }
 }
