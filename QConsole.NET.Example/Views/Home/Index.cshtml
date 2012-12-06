@@ -1,0 +1,26 @@
+﻿@model dynamic
+
+@{
+	Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Hej</title>
+		<script src="~/Scripts/jquery-1.7.1.min.js"></script>
+		<script src="~/Scripts/jquery-qconsole.js"></script>
+		<link rel="stylesheet" href="~/Content/style.css"/>
+		<script>
+			jQuery(function() {
+				jQuery.qconsole({ serviceUrl: "/QConsole.axd?action=commands", triggerKeyCombos: [[220]] });
+			});
+		</script>
+	</head>
+	<body>
+		<div>
+			  
+		</div>
+	</body>
+</html>
