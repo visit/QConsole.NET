@@ -14,8 +14,8 @@
     <tags>jquery quake console jquery.qconsole qconsole terminal</tags>
   </metadata>
 	<files>
-		<file src="bin\Debug\*.dll" target="lib\net40" />
-		<file src="bin\Debug\*.pdb" target="lib\net40" />
+		<file src="bin\release\*.dll" target="lib\net40" />
+		<file src="bin\release\*.pdb" target="lib\net40" />
 		<file src="web.config.transform" target="content" />
 	</files>
 </package>
