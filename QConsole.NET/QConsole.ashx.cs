@@ -27,8 +27,8 @@ namespace QConsole.NET
                     
                     var response = new CommandsResponse()
                                        {
-                                           AutoComplete = "/QConsole.axd?action=complete",
-                                           Execute = "/QConsole.axd?action=execute",
+                                           AutoComplete = "QConsole.axd?action=complete",
+                                           Execute = "QConsole.axd?action=execute",
                                            Commands = QConsole.ConsoleCommands
                                        };
 
