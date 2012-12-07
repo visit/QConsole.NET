@@ -4,8 +4,8 @@
     <id>QConsole.NET</id>
     <version>1.0.1</version>
     <title>QConsole.NET</title>
-    <authors>Jimmy Stridh</authors>
-    <owners>Jimmy Stridh</owners>
+    <authors>Jimmy Stridh, Hannes Johansson</authors>
+    <owners>Jimmy Stridh, Hannes Johansson</owners>
     <licenseUrl>https://github.com/visit/QConsole.NET</licenseUrl>
     <projectUrl>https://github.com/visit/QConsole.NET</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
