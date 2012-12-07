@@ -12,6 +12,7 @@
     <description>jquery.qconsole ASP.NET endpoint</description>
     <copyright>Copyleft</copyright>
     <tags>jquery quake console jquery.qconsole qconsole terminal</tags>
+    <iconUrl>https://dl.dropbox.com/u/19318/qconsole.png</iconUrl>
   </metadata>
 	<files>
 		<file src="bin\release\*.dll" target="lib\net40" />
