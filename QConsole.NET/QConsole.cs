@@ -1,8 +1,11 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Security.Authentication;
 using System.Threading;
+using System.Web.Compilation;
 
 namespace QConsole.NET
 {
@@ -18,14 +21,15 @@ namespace QConsole.NET
                 {
                     if (Authenticators == null)
                     {
-                        Thread.Sleep(500); //hack to wait for assemblies to load
+                        var assemblies = BuildManager.GetReferencedAssemblies().Cast<Assembly>();
+
                         Authenticators =
-                            AppDomain.CurrentDomain.GetAssemblies()
+                            assemblies
                                      .SelectMany(ass => ass.GetTypes())
                                      .Where(t => (typeof (IQConsoleAuthorization)).IsAssignableFrom(t) && t.IsClass).Select(x => (IQConsoleAuthorization)Activator.CreateInstance(x)).ToList();
                     
                         Commands =
-                            AppDomain.CurrentDomain.GetAssemblies()
+                            assemblies
                                      .SelectMany(ass => ass.GetTypes())
                                      .Where(t => (typeof(IQConsoleCommand)).IsAssignableFrom(t) && t.IsClass).Select(x => (IQConsoleCommand)Activator.CreateInstance(x)).ToList();
                     }
